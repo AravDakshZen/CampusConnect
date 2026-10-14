@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A2BB8" />
+      <stop offset="50%" stop-color="#681B97" />
+      <stop offset="100%" stop-color="#3B0D54" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer ambient ring -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#C084FC" stroke-width="4" stroke-opacity="0.35" stroke-dasharray="12 8" />
+
+  <!-- Academic Shield with Gold Border -->
+  <path d="M 256,96 L 376,140 C 376,270 256,360 256,360 C 256,360 136,270 136,140 Z" fill="#4A126D" stroke="url(#goldGrad)" stroke-width="10" filter="url(#glow)" />
+
+  <!-- Gold Top Crest Accent -->
+  <path d="M 146,148 L 256,108 L 366,148 L 366,180 L 146,180 Z" fill="url(#goldGrad)" />
+
+  <!-- Connected Network Orbit Nodes -->
+  <line x1="256" y1="96" x2="256" y2="52" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+  <circle cx="256" cy="48" r="14" fill="#F59E0B" />
+
+  <line x1="376" y1="140" x2="424" y2="120" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+  <circle cx="430" cy="116" r="12" fill="#F59E0B" />
+
+  <line x1="136" y1="140" x2="88" y2="120" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+  <circle cx="82" cy="116" r="12" fill="#F59E0B" />
+
+  <line x1="256" y1="360" x2="256" y2="416" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+  <circle cx="256" cy="424" r="14" fill="#F59E0B" />
+
+  <circle cx="96" cy="310" r="10" fill="#E9D5FF" opacity="0.8" />
+  <line x1="136" y1="270" x2="96" y2="310" stroke="#E9D5FF" stroke-width="3" opacity="0.6" stroke-dasharray="4 4" />
+
+  <circle cx="416" cy="310" r="10" fill="#E9D5FF" opacity="0.8" />
+  <line x1="376" y1="270" x2="416" y2="310" stroke="#E9D5FF" stroke-width="3" opacity="0.6" stroke-dasharray="4 4" />
+
+  <!-- Prominent "REC" Typography -->
+  <text x="256" y="278" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="78" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">REC</text>
+
+  <!-- Tagline Banner -->
+  <text x="256" y="318" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#FDE68A" text-anchor="middle" letter-spacing="2">CAMPUS CONNECT</text>
+</svg>

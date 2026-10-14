@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rec-purple: #681B97;
+  --color-rec-purple-dark: #4A126D;
+  --color-rec-purple-light: #8A2BB8;
+  --color-rec-purple-soft: #F7F0FC;
+  --color-rec-purple-muted: rgba(104, 27, 151, 0.12);
+  --color-rec-gold: #D4A017;
+  --color-rec-gold-light: #F5C842;
+  --color-rec-gold-soft: #FDF8EC;
+  --color-light-bg: #FFFFFF;
+  --color-light-bg-secondary: #F7F5FA;
+  --color-light-border: #E8E4EE;
+  --font-family-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background-color: #F7F5FA;
+    color: #1A1620;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F7F5FA;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #681B97;
+    border-radius: 9999px;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(104, 27, 151, 0.12);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(104, 27, 151, 0.15);
+    border-radius: 1rem;
+  }
+  .gradient-brand {
+    background: linear-gradient(135deg, #4A126D 0%, #681B97 50%, #8A2BB8 100%);
+  }
+  .gradient-brand-subtle {
+    background: linear-gradient(135deg, rgba(74, 18, 109, 0.08) 0%, rgba(104, 27, 151, 0.14) 100%);
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, #D4A017 0%, #F5C842 100%);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #681B97, #A855F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(104, 27, 151, 0.14);
+  }
+  .badge-featured {
+    background: linear-gradient(135deg, #D4A017, #F5C842);
+    color: #1A1620;
+  }
+  .badge-new {
+    background: #681B97;
+    color: #ffffff;
+  }
+  .badge-closing {
+    background: #DC2626;
+    color: #ffffff;
+  }
+  .badge-today {
+    background: #059669;
+    color: #ffffff;
+  }
+  .badge-free {
+    background: #0369A1;
+    color: #ffffff;
+  }
+}
